@@ -1,0 +1,30 @@
+package:
+  name: cbmpy
+  version: "0.7.5"
+
+source:
+  url: https://pypi.python.org/packages/e0/fa/5828d1ddb342839b774e41de0e2fc1eb01c20b8be43449a0ad58d524d2c3/cbmpy-0.7.5.tar.gz
+  md5: 48578d4fdbbac7ff4010c5d15471fc7e
+
+build:
+  number: 1
+  string: test0
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+    - numpy
+    - sympy
+    - python-libsbml
+    - scipy
+    - matplotlib
+    - suds
+    
+
+about:
+  home: http://cbmpy.sourceforge.net
+  license: GPL
+  licence_file: LICENCE_GPLv3.txt
