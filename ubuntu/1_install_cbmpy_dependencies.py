@@ -30,7 +30,8 @@ optcnt = itertools.count(1,1)
 if UBUNTU:
     res['Required'][reqcnt.next()] = 'sudo -E apt-get -y install build-essential g++ gfortran python python-dev'
 if CONDA:
-    res['Required'][reqcnt.next()] = 'conda update -y conda # if this is the only required package ignore it'
+    pass
+    #res['Required'][reqcnt.next()] = 'conda update -y conda # if this is the only required package ignore it'
 try:
     import pip
 except ImportError:
