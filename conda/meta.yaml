@@ -5,10 +5,9 @@ package:
 source:
   svn_url: https://svn.code.sf.net/p/cbmpy/code/trunk/cbmpy
   svn_rev: 559
-  svn_ignore_externals: True # (defaults to False)
 
 build:
-  number: 1
+  number: 5
   include_recipe: False
 
 requirements:
