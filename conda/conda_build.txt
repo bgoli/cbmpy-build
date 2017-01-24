@@ -16,9 +16,15 @@ Convert to all platforms (use the path and file shown in the build command above
  conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.11-py27_5.tar.bz2 -o multi-arch
  
 Upload to Anaconda:
- anaconda upload .\multi-arch\linux-32\cbmpy-0.7.11-py27_5.tar.bz2
- anaconda upload .\multi-arch\linux-64\cbmpy-0.7.11-py27_5.tar.bz2
- anaconda upload .\multi-arch\osx-64\cbmpy-0.7.11-py27_5.tar.bz2
- anaconda upload .\multi-arch\win-32\cbmpy-0.7.11-py27_5.tar.bz2
- anaconda upload .\multi-arch\win-64\cbmpy-0.7.11-py27_5.tar.bz2
+ anaconda upload .\multi-arch\linux-32\cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload .\multi-arch\linux-64\cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload .\multi-arch\osx-64\cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload .\multi-arch\win-32\cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload .\multi-arch\win-64\cbmpy-0.7.11-py27_6.tar.bz2
  
+Linux
+ anaconda upload ./multi-arch/linux-32/cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload ./multi-arch/linux-64/cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload ./multi-arch/osx-64/cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload ./multi-arch/win-32/cbmpy-0.7.11-py27_6.tar.bz2
+ anaconda upload ./multi-arch/win-64/cbmpy-0.7.11-py27_6.tar.bz2
