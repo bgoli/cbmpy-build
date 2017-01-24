@@ -6,19 +6,19 @@ Optional: update build version and SVN information in meta.yaml
  conda update conda
  conda update conda-build
 
-Run to build (note the upload command path e.g. anaconda upload C:\Anaconda\conda-bld\win-64\cbmpy-0.7.10-py27_1.tar.bz2): 
+Run to build (note the upload command path e.g. anaconda upload C:\Anaconda\conda-bld\win-64\cbmpy-0.7.11-py27_1.tar.bz2): 
  conda build .
  
 Run to install locally:
  conda install --use-local cbmpy
 
 Convert to all platforms (use the path and file shown in the build command above):
- conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.10-py27_1.tar.bz2 -o multi-arch
+ conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.11-py27_1.tar.bz2 -o multi-arch
  
 Upload to Anaconda:
- anaconda upload .\multi-arch\linux-32\cbmpy-0.7.10-py27_1.tar.bz2
- anaconda upload .\multi-arch\linux-64\cbmpy-0.7.10-py27_1.tar.bz2
- anaconda upload .\multi-arch\osx-64\cbmpy-0.7.10-py27_1.tar.bz2
- anaconda upload .\multi-arch\win-32\cbmpy-0.7.10-py27_1.tar.bz2
- anaconda upload .\multi-arch\win-64\cbmpy-0.7.10-py27_1.tar.bz2
+ anaconda upload .\multi-arch\linux-32\cbmpy-0.7.11-py27_1.tar.bz2
+ anaconda upload .\multi-arch\linux-64\cbmpy-0.7.11-py27_1.tar.bz2
+ anaconda upload .\multi-arch\osx-64\cbmpy-0.7.11-py27_1.tar.bz2
+ anaconda upload .\multi-arch\win-32\cbmpy-0.7.11-py27_1.tar.bz2
+ anaconda upload .\multi-arch\win-64\cbmpy-0.7.11-py27_1.tar.bz2
  
