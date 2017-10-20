@@ -1,13 +1,13 @@
 package:
   name: cbmpy
-  version: "0.7.11"
+  version: "0.7.18"
 
 source:
   svn_url: https://svn.code.sf.net/p/cbmpy/code/trunk/cbmpy
-  svn_rev: 559
+  svn_rev: 628
 
 build:
-  number: 7
+  number: 1
   include_recipe: False
 
 requirements:
@@ -24,7 +24,7 @@ requirements:
     - biopython
     - suds
     - nose
-    - wxpython
+    
     
 about:
   home: http://cbmpy.sourceforge.net
