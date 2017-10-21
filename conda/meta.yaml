@@ -7,7 +7,7 @@ source:
   svn_rev: 628
 
 build:
-  number: 1
+  number: 2
   include_recipe: False
 
 requirements:
