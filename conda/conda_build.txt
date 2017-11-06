@@ -15,7 +15,7 @@ Run to install locally:
 Convert to all platforms (use the path and file shown in the build command above):
  conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.18-py27h37fcb63_1.tar.bz2 -o multi-arch
  
-Upload to Anaconda:
+Upload to Anaconda: https://www.youtube.com/watch?v=3qGQCjFJzgY
 
  anaconda upload .\multi-arch\linux-32\cbmpy-0.7.18-py27h37fcb63_1.tar.bz2
  anaconda upload .\multi-arch\linux-64\cbmpy-0.7.18-py27h37fcb63_1.tar.bz2
