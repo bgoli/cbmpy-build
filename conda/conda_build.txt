@@ -21,7 +21,21 @@ Upload to Anaconda:
  anaconda upload .\multi-arch\linux-64\cbmpy-0.7.19-py27_2.tar.bz2
  anaconda upload .\multi-arch\osx-64\cbmpy-0.7.19-py27_2.tar.bz2
  anaconda upload .\multi-arch\win-32\cbmpy-0.7.19-py27_2.tar.bz2
+
+# default build
  anaconda upload .\multi-arch\win-64\cbmpy-0.7.19-py27_2.tar.bz2
+# new
+ anaconda upload .\multi-arch\linux-ppc64le\cbmpy-0.7.19-py27_2.tar.bz2
+ anaconda upload .\multi-arch\linux-armv6l\cbmpy-0.7.19-py27_2.tar.bz2
+ anaconda upload .\multi-arch\linux-armv7l\cbmpy-0.7.19-py27_2.tar.bz2
+ anaconda upload .\multi-arch\linux-aarch64\cbmpy-0.7.19-py27_2.tar.bz2
+
+
+ 
+ 
+ 
+ 
+ 
  
 Linux
  anaconda upload ./multi-arch/linux-32/cbmpy-0.7.19-py27_2.tar.bz2
