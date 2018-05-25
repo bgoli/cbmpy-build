@@ -4,25 +4,27 @@ package:
 
 source:
   svn_url: https://svn.code.sf.net/p/cbmpy/code/trunk/cbmpy
-  svn_rev: 646
-
+  svn_rev: 648
+  
 build:
-  number: 1
+  number: 2
   include_recipe: False
 
 requirements:
   build:
-    - python>=2.7
+    - python=3.6
     - setuptools
   run:
-    - python>=2.7
+    - python
     - numpy
     - sympy
     - python-libsbml
-    - scipy>=1.0.0
+#    - scipy>=1.0.0
     - matplotlib
     - nose
-#    - biopython
+    - biopython
+    - xlrd
+    - xlwt
     
 about:
   home: http://cbmpy.sourceforge.net
