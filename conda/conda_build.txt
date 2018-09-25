@@ -6,29 +6,29 @@ Optional: update build version and SVN information in meta.yaml
  conda update conda
  conda update conda-build
 
-Run to build (note the upload command path e.g. anaconda upload C:\Anaconda\conda-bld\win-64\cbmpy-0.7.20-py36_1.tar.bz2): 
+Run to build (note the upload command path e.g. anaconda upload C:\Anaconda\conda-bld\win-64\cbmpy-0.7.21-py27_0.tar.bz2): 
  conda build .
  
 Run to install locally:
  conda install --use-local cbmpy
 
 Convert to all platforms (use the path and file shown in the build command above):
- conda convert --platform all C:\Anaconda\envs\py3dev\conda-bld\win-64\cbmpy-0.7.20-py36_1.tar.bz2 -o multi-arch
+ conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.21-py27_0.tar.bz2 -o multi-arch
  
 Upload to Anaconda: 
 
- anaconda upload .\multi-arch\linux-32\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\linux-64\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\osx-64\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\win-32\cbmpy-0.7.20-py36_1.tar.bz2
+ anaconda upload .\multi-arch\linux-32\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\linux-64\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\osx-64\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\win-32\cbmpy-0.7.21-py27_0.tar.bz2
 
 # default build
- anaconda upload .\multi-arch\win-64\cbmpy-0.7.20-py36_1.tar.bz2
+ anaconda upload .\multi-arch\win-64\cbmpy-0.7.21-py27_0.tar.bz2
 # new
- anaconda upload .\multi-arch\linux-ppc64le\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\linux-armv6l\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\linux-armv7l\cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload .\multi-arch\linux-aarch64\cbmpy-0.7.20-py36_1.tar.bz2
+ anaconda upload .\multi-arch\linux-ppc64le\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\linux-armv6l\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\linux-armv7l\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\linux-aarch64\cbmpy-0.7.21-py27_0.tar.bz2
 
 
  
@@ -38,9 +38,9 @@ Upload to Anaconda:
  
  
 Linux
- anaconda upload ./multi-arch/linux-32/cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload ./multi-arch/linux-64/cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload ./multi-arch/osx-64/cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload ./multi-arch/win-32/cbmpy-0.7.20-py36_1.tar.bz2
- anaconda upload ./multi-arch/win-64/cbmpy-0.7.20-py36_1.tar.bz2
+ anaconda upload ./multi-arch/linux-32/cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload ./multi-arch/linux-64/cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload ./multi-arch/osx-64/cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload ./multi-arch/win-32/cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload ./multi-arch/win-64/cbmpy-0.7.21-py27_0.tar.bz2
 
