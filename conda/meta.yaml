@@ -1,18 +1,18 @@
 package:
   name: cbmpy
-  version: "0.7.20"
+  version: "0.7.21"
 
 source:
   svn_url: https://svn.code.sf.net/p/cbmpy/code/trunk/cbmpy
   svn_rev: 648
   
 build:
-  number: 2
+  number: 1
   include_recipe: False
 
 requirements:
   build:
-    - python=3.6
+    - python=2.7
     - setuptools
   run:
     - python
