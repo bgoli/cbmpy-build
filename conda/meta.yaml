@@ -1,10 +1,9 @@
 package:
   name: cbmpy
-  version: "0.8.0"
+  version: "0.8.1"
 
 source:
     git_url: https://github.com/SystemsBioinformatics/cbmpy.git
-#    git_rev: 0.8.0
     git_depth: 1 # (Defaults to -1/not shallow)
   
 build:
@@ -13,10 +12,14 @@ build:
 
 requirements:
   build:
-    - python=3.6
-    - setuptools
+    - python==3.6
+    - packaging
+    - numpy
+    - sympy
+    - python-libsbml
+
   run:
-    - python>=3.6
+    - python==3.6
     - numpy
     - sympy
     - python-libsbml
@@ -24,6 +27,7 @@ requirements:
     - biopython
     - xlrd
     - xlwt
+    - packaging
     
 about:
   home: http://cbmpy.sourceforge.net

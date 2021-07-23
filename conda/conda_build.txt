@@ -1,47 +1,62 @@
-Open an anaconda prompt
+# Building and uploading Anaconda packages
 
-cd to conda build files
+## Setup
 
-Optional: update build version and SVN information in meta.yaml
- conda update conda
- conda update conda-build
 
-Run to build (note the upload command path e.g. 
- anaconda upload C:\Anaconda\conda-bld\win-64\cbmpy-0.7.21-py27_0.tar.bz2
- conda build . -c conda-forge
+ - Open an anaconda prompt
+ - Create and change to build directory
+ - copy conda recipes to build directory `bld.bat` `build.sh` `meta.yaml`
+ - edit and update version number and recipe in `meta.yaml`
+
+Optional: update your conda
+
+ - conda update conda
+ - conda update conda-build
+
+## Build native OS package (in this case win64)
+
+  conda build . -c conda-forge
+
+Copy the conda package from *Anaconda3\conda-bld\win64* to the build directory.
+
+## Test
+
+Create a test environment and test your package
+
+ conda create -n "test39" -c conda-forge python=3.9 ipython numpy sympy xlrd xlwt packaging python-libsbml nose
  
-Run to install locally:
- conda install C:\Anaconda\conda-bld\win-64\cbmpy-0.7.21-py27_0.tar.bz2
+ conda activate test39
+ conda install cbmpy-0.8.1-py39hb572761_1.tar.bz2
+ 
+ ipython
+ import cbmpy
+ 
+## Convert to all platforms
 
-Convert to all platforms (use the path and file shown in the build command above):
- conda convert --platform all C:\Anaconda\conda-bld\win-64\cbmpy-0.7.21-py27_0.tar.bz2 -o multi-arch
+ conda convert --platform all -o multi-arch cbmpy-0.8.1-py39hb572761_1.tar.bz2 
  
-Upload to Anaconda: 
+## Upload to Anaconda
 
- anaconda upload .\multi-arch\linux-32\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\linux-64\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\osx-64\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\win-32\cbmpy-0.7.21-py27_0.tar.bz2
+ anaconda upload .\multi-arch\linux-32\*
+ anaconda upload .\multi-arch\linux-64\*
+ anaconda upload .\multi-arch\osx-64\*
+ anaconda upload .\multi-arch\osx-arm64\*
+ anaconda upload .\multi-arch\win-64\*
 
-# default build
- anaconda upload .\multi-arch\win-64\cbmpy-0.7.21-py27_0.tar.bz2
-# new
- anaconda upload .\multi-arch\linux-ppc64le\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\linux-armv6l\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\linux-armv7l\cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload .\multi-arch\linux-aarch64\cbmpy-0.7.21-py27_0.tar.bz2
+# Build and upload to PyPI
 
+## Build PyPI packages
 
+ - Copy the source to a build directory and change to that directory.
+ - Activate your favourite build environment
  
+## Build source, wheel and binary packages 
+ - `python setup.py sdist`
+ - `python setup.py bdist_wheel`
+ - `python setup.py bdist_wininst`
  
+## Upload to PyPI (src and wheel)
  
+ twine upload dist\*
  
- 
- 
-Linux
- anaconda upload ./multi-arch/linux-32/cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload ./multi-arch/linux-64/cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload ./multi-arch/osx-64/cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload ./multi-arch/win-32/cbmpy-0.7.21-py27_0.tar.bz2
- anaconda upload ./multi-arch/win-64/cbmpy-0.7.21-py27_0.tar.bz2
-
+ (C) Brett G. Olivier, Amsterdam, 2021.
