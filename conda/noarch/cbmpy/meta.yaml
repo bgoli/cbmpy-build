@@ -1,0 +1,48 @@
+{% set name = "cbmpy" %}
+{% set version = "0.8.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 60dad1e7503a3c2b9cb2c80ca19c97d639d2e5bb348ad31477ed485b580a7bd8
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - nose
+    - numpy
+    - packaging
+    - pip
+    - python
+  run:
+    - nose
+    - numpy
+    - packaging
+    - python
+
+test:
+  imports:
+    - cbmpy
+    - cbmpy.fluxmodules
+  requires:
+    - nose
+
+about:
+  home: "https://github.com/SystemsBioinformatics/cbmpy"
+  license: "GNU General Public (GPL)"
+  license_family: LGPL
+  licence_file: LICENCE_GPLv3.txt
+  summary: "CBMPy: https://github.com/SystemsBioinformatics/cbmpy is a platform for constraint based modelling and analysis. CBMPy implements popular analyses such as FBA, FVA, element/charge balancing, network analysis and model editing as well as advanced methods."
+  doc_url: http://cbmpy.sourceforge.net
+  dev_url: http://cbmpy.sourceforge.net
+
+extra:
+  recipe-maintainers:
+    - bgoli
